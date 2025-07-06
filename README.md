@@ -8,7 +8,6 @@
 
 🔗Live Website Link (https://vivix-digitals-by-elvish.netlify.app/)
 
-Replace the above link with your deployed URL if you're hosting it (e.g., Netlify, GitHub Pages, Vercel).
 
 ---
 
