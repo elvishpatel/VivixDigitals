@@ -35,29 +35,7 @@
 
 ---
 
-## 📁 Folder Structure
-
-vivix-digitals/
-├── images/
-│ ├── aboutus.jpg
-│ ├── icon-1.svg
-│ ├── icon-2.svg
-│ ├── icon-3.svg
-│ ├── icon-4.svg
-│ ├── icon-5.svg
-│ └── icon-6.svg
-├── index.html
-
-
 ---
-
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/vivix-digitals.git
-cd vivix-digitals
 
 ✨ Customization
 You can customize the following sections easily:
@@ -93,3 +71,9 @@ This project is licensed under the MIT License – free to use, share, and modif
 Developed by Elvish Patel
 Inspired by real-world digital agency needs.
 Let’s build something impactful, together 💻✨
+
+ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/vivix-digitals.git
+cd vivix-digitals
