@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivix Digitals</title>
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+:root {
+  --black: #16161d;
+  --white: #fff;
+  --light-color: #808080;
+  --light-bg: #f5f5f8;
+  --google-color: #4285f4;
+  --twitter-color: #1da1f2;
+  --youtube-color: #ff0000;
+  --linkedin-color: #0e76a8;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+/* reusable */
+.btn {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.7rem;
+  border: 0.1rem solid var(--white);
+  border-radius: 10rem;
+  padding: 1.5rem 4rem;
+}
+
+.btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+/* reusable */
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5rem 9%;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.header .logo {
+  margin-right: auto;
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.header .logo span {
+  font-weight: normal;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: var(--white);
+  margin-left: 3rem;
+}
+
+.header .menu {
+  font-size: 2rem;
+  color: var(--white);
+  display: none;
+}
+
+.header.active {
+  background: var(--white);
+  padding: 3rem 9%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header.active .logo,
+.header.active .navbar a,
+.header.active .menu {
+  color: var(--black);
+}
+/* header */
+
+/* home */
+.home {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('images/hero.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.home p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  text-transform: none;
+  color: var(--white);
+}
+/* home */
+
+/* about */
+.about .box-container .box .image {
+  height: 40rem;
+}
+
+.about .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.about .box-container .box p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--light-color);
+  text-transform: none;
+}
+/* about */
+
+/* services */
+.services {
+  background: var(--light-bg);
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+}
+
+.services .box-container .box {
+  background: var(--white);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.services .box-container .box img {
+  margin-bottom: 2rem;
+}
+
+.services .box-container .box .icon-1{
+  height: 10px;
+  width: 10px;
+}
+
+.services .box-container .box h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.services .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+.services .box-container .box:hover {
+  background: var(--black);
+}
+
+.services .box-container .box:hover h3,
+.services .box-container .box:hover p {
+  color: var(--white);
+}
+
+.services .box-container .box:hover img {
+  filter: invert(100%);
+}
+/* services */
+
+/* FAQ's */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.faq {
+  padding: 5px;
+}
+
+.heading {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.faq-container {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  border-radius: 0.5rem;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-item h3 {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.active {
+  background-color: #ffffff;
+}
+
+.active .answer {
+  display: block;
+}
+
+/* contact */
+.contact {
+  background: var(--light-bg);
+}
+
+.contact .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact .box-container .box {
+  width: 30rem;
+}
+
+.contact .box-container .box h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.contact .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  margin-bottom: 2rem;
+}
+
+.contact .box-container form {
+  flex: 1 1 42rem;
+}
+
+.contact .box-container form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .box-container form .inputBox input {
+  width: 49%;
+}
+
+.contact .box-container form .inputBox input,
+.contact .box-container form textarea {
+  border-radius: 5rem;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.5rem;
+  color: var(--black);
+  margin: 0.7rem 0;
+}
+
+.contact .box-container form textarea {
+  width: 100%;
+  border-radius: 1rem;
+  resize: none;
+  height: 25rem;
+}
+
+.contact .box-container form .btn {
+  color: var(--black);
+  background: var(--white);
+  border: 0.1rem solid var(--black);
+  margin-top: 1rem;
+}
+
+.contact .box-container form .btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.footer {
+  text-align: center;
+}
+
+.footer .logo {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.footer .logo span {
+  font-weight: normal;
+}
+
+.footer p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.footer .socials ion-icon {
+  font-size: 2.5rem;
+  color: var(--black);
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.footer .socials ion-icon:hover {
+  filter: brightness(0.7);
+}
+
+.footer .socials a:nth-child(1) ion-icon {
+  color: var(--google-color);
+}
+
+.footer .socials a:nth-child(1):hover ion-icon {
+  color: var(--white);
+}
+
+.footer .socials a:nth-child(2) ion-icon {
+  color: var(--instagram-color);
+}
+
+.footer .socials a:nth-child(2):hover ion-icon {
+  color: var(--white);
+}
+
+.footer .socials a:nth-child(3) ion-icon {
+  color: var(--youtube-color);
+}
+
+.footer .socials a:nth-child(3):hover ion-icon {
+  color: var(--white);
+}
+
+.footer .socials a:nth-child(4) ion-icon {
+  color: var(--linkedin-color);
+}
+
+.footer .socials a:nth-child(4):hover ion-icon {
+  color: var(--white);
+}
+
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+
+  .home h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .menu {
+    display: block;
+  }
+
+  .header .navbar {
+    position: fixed;
+    top: 6.4rem;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    transform: translateX(100%);
+  }
+
+  .header .navbar.show {
+    transform: translateX(0);
+  }
+
+  .header .navbar a {
+    color: var(--black);
+    margin: 0;
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+
+  .contact .box-container form .inputBox input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Vivix <span>Digitals</span></a>
+      <a class="menu fas fa-bars"></a>
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">services</a>
+        <a href="#faqs">FAQ's</a>
+        <a href="#contact">contact Us</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <h1>Welcome to Vivix Digitals</h1>
+      <p>Your journey towards digital excellence starts right here.</p>
+      <a href="#contact" class="btn">Get in touch</a>
+    </section>
+
+    <section class="about" id="about">
+      <div class="box-container">
+        <div class="box">
+          <h1 class="heading">Who We Are</h1>
+          <p><br>
+            At Vivix Digitals, we are a dedicated team of creative minds and digital experts,
+            committed to delivering innovative solutions for your online success. Our journey is
+            driven by passion and fueled by creativity, aiming to transform your ideas into reality.
+          </p>
+          <p><br>
+            With years of experience and a relentless pursuit of excellence, we specialize in
+            crafting unique and engaging digital experiences that captivate your audience and drive
+            tangible results. Our focus is on collaboration, innovation, and results-driven strategies,
+            ensuring your brand stands out in the digital landscape.
+          </p>
+        </div>
+    
+        <div class="box">
+          <div class="image">
+            <img src="images/aboutus.jpg" alt="About Us" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h1 class="heading">Our Top Services</h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="images/icon-1.svg" id="icon-1" alt="Seo Icon" width="60" height="60"/>
+          <h3>Seo</h3>
+          <p>
+            Our branding services empower your business with a distinct identity that resonates
+            with your audience. We create memorable brand experiences that leave a lasting impression.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/icon-2.svg" alt="Smm Icon" width="70" height="70" />
+          <h3>SMM</h3>
+          <p>
+            Elevate your design game with our innovative and visually appealing solutions. From
+            concept to execution, we turn ideas into stunning visuals that communicate your message.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/icon-3.svg" alt="Web Development Icon" width="60" height="60"/>
+          <h3>Web Development</h3>
+          <p>
+            Our development expertise transforms your digital dreams into reality. With cutting-edge
+            technology and coding prowess, we build functional and user-friendly websites and apps.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/icon-4.svg" alt="Graphics Designing Icon" />
+          <h3>Graphic Designing</h3>
+          <p>
+            Capture the essence of your brand through stunning visuals. Our photography services bring
+            life to your products, stories, and events, enhancing your brand's visual narrative.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/icon-5.svg" alt="Ai chat support Icon" />
+          <h3> AI-Powered Customer Support</h3>
+          <p>
+            We provide comprehensive support to ensure your digital assets run smoothly. From technical
+            assistance to ongoing maintenance, we've got your back every step of the way.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/icon-6.svg" alt="Marketing Icon" />
+          <h3>Marketing</h3>
+          <p>
+            Amplify your brand's reach with our tailored marketing strategies. We create compelling
+            campaigns that connect with your audience, driving engagement and business growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs" id="faqs">
+      <h1 class="heading">Frequently Asked Questions</h1>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3 class="question">Refund Policy <span class="icon">+</span></h3>
+          <p class="answer"><br>Our refund policy allows you to request a refund within 30 days of purchase .if you're not satisfied with our services. Please contact us to initiate the refund process. if your work was completed then you are not able to eligible for refund.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Trust and Security <span class="icon">+</span></h3>
+          <p class="answer">At Vivix Digitals, we prioritize the security of your information. Our website and payment systems are encrypted to ensure your data is protected. We value your trust and take all necessary measures to maintain a secure environment.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Contact Information <span class="icon">+</span></h3>
+          <p class="answer">You can reach us through email at vivixdigitals@gmail.com or by any social media give below in or website. Our team is available to assist you with any inquiries or concerns you may have.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">How We Work <span class="icon">+</span></h3>
+          <p class="answer">Our process begins with understanding your needs and goals. We collaborate closely with you to create a tailored strategy, design, and development plan. Throughout the project, we maintain open communication and provide regular updates to ensure your satisfaction.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Billing and Payments <span class="icon">+</span></h3>
+          <p class="answer">We accept paypal as payment because we prefer security and privacy first.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Timeline for Projects <span class="icon">+</span></h3>
+          <p class="answer">Project timelines vary based on the scope and complexity of the work. We work diligently to deliver quality results within the agreed-upon timeframe. Our team will provide you with a clear project timeline at the outset.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="question">Quality Assurance <span class="icon">+</span></h3>
+          <p class="answer">We are committed to delivering high-quality results. Our team follows a rigorous quality assurance process to ensure that each project meets our standards of excellence. We perform thorough testing and review to guarantee the best outcome for your project.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+      <h1 class="heading">contact us</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="#" class="logo" style="font-size: 20px;">Vivix <span>Digitals</span></a>
+          <p><br><br>We're here to assist you.<br> Whether you have questions,<br> feedback, or collaboration ideas,<br> feel free to get in touch with us.<br> Fill out the form or reach us <br> directly through the provided <br> contact details.We look forward <br> to hearing from you!</p>
+        </div>
+
+        <form action="#" method="POST">
+          <div class="inputBox">
+            <input type="text" name="name" placeholder="Your name" />
+            <input type="text" name="number" maxlength="10" placeholder="Your number" />
+          </div>
+          <textarea name="message" placeholder="Your message" cols="30" rows="10"></textarea>
+          <input type="submit" name="submit" value="Send Message" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <section class="footer">
+      <a href="#" class="logo">Vivix <span>Digitals</span></a>
+      <p>
+        Vivix Digitals is a dynamic digital agency that crafts impactful online experiences.<br>
+         With a focus on innovation and creativity, we bring your brand to life in the digital world. <br> Our dedicated team delivers tailored solutions,
+         fostering connections, and <br> driving growth. Let's embark on a journey of digital excellence together.
+      </p>
+      
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=100094774217712"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/vivix_digitals/"><ion-icon name="logo-instagram" color="instagram"></ion-icon></a>
+        <a href="https://www.youtube.com/@VivixDigitals"><ion-icon name="logo-youtube"></ion-icon></a>
+        <a href="https://www.pinterest.com/vivixdigitals/"><ion-icon name="logo-pinterest"></ion-icon></a>
+        <a href="https://twitter.com/DigitalsVi53490/"><ion-icon name="logo-twitter"></ion-icon></a>
+        
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      const navbar = document.querySelector('.header .navbar');
+const menuButton = document.querySelector('.header .menu');
+
+menuButton.addEventListener('click', () => {
+  navbar.classList.toggle('show');
+  menuButton.classList.toggle('fa-close');
+});
+
+document.onscroll = () => {
+  navbar.classList.remove('show');
+  menuButton.classList.remove('fa-close');
+
+  if (window.scrollY > 0) {
+    document.querySelector('.header').classList.add('active');
+  } else {
+    document.querySelector('.header').classList.remove('active');
+  }
+};
+
+document.onload = () => {
+  if (window.scrollY > 0) {
+    document.querySelector('.header').classList.add('active');
+  } else {
+    document.querySelector('.header').classList.remove('active');
+  }
+};
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.question');
+  const answer = item.querySelector('.answer');
+
+  question.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});
+
+    </script>
+  </body>
+</html>
