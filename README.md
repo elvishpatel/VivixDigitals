@@ -37,6 +37,7 @@
 
 
 ##✨ Customization
+
 You can customize the following sections easily:
 
 - **🔧 Images – Replace image files inside /images folder.**
@@ -47,10 +48,18 @@ You can customize the following sections easily:
 
 - **🛜 Social Media Links – Update icons and URLs in the footer.**
 
+---
+
+
 ##📞 Contact & Socials
+
 Want to collaborate or ask a question? Connect with us!
 
 - **📧 Email: vivixdigitals@gmail.com
+
+
+---
+
 
 ##💡 Use Cases
 This project is ideal for:
@@ -63,13 +72,21 @@ This project is ideal for:
 
 - **📈 Client project demo for a digital agency**
 
+
+---
+
+
 ##📜 License
 This project is licensed under the MIT License – free to use, share, and modify.
+
+---
 
 ##🙌 Credits
 - **Developed by Elvish Patel
 Inspired by real-world digital agency needs.
 Let’s build something impactful, together 💻✨**
+
+---
 
  Clone the Repository
 
