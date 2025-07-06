@@ -36,7 +36,7 @@
 ---
 
 
-##✨ Customization
+## ✨ Customization
 
 You can customize the following sections easily:
 
@@ -51,7 +51,7 @@ You can customize the following sections easily:
 ---
 
 
-##📞 Contact & Socials
+## 📞 Contact & Socials
 
 Want to collaborate or ask a question? Connect with us!
 
@@ -61,7 +61,7 @@ Want to collaborate or ask a question? Connect with us!
 ---
 
 
-##💡 Use Cases
+## 💡 Use Cases
 This project is ideal for:
 
 - **🌐 Portfolio showcase**
@@ -76,20 +76,14 @@ This project is ideal for:
 ---
 
 
-##📜 License
+## 📜 License
 This project is licensed under the MIT License – free to use, share, and modify.
 
 ---
 
-##🙌 Credits
+## 🙌 Credits
 - **Developed by Elvish Patel
 Inspired by real-world digital agency needs.
 Let’s build something impactful, together 💻✨**
 
 ---
-
- Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/vivix-digitals.git
-cd vivix-digitals
